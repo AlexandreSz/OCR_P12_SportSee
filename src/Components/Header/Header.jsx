@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../../assets/SportSee-Logo.svg";
 import { Link } from "react-router-dom";
+import "./header.css";
 
 const Header = () => {
     return (
