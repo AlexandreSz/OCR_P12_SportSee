@@ -2,8 +2,9 @@ import React from "react";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Sidebar from "./Components/Sidebar/Sidebar";
-import DailyActivity from "./Components/DailyActivity/DailyActivity";
 import Home from "./Pages/Home";
+
+import "./App.css";
 
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </main>
       </BrowserRouter>

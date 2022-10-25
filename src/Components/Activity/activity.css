@@ -1,0 +1,31 @@
+.activity{
+    height: 320px;
+    width: 1000px;
+    margin-bottom: 4rem;
+    margin-right: 200px;
+    background-color: #fbfbfb;
+    border-radius: 5px;
+}
+
+.activity__header{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.activity__header h3{
+    margin-top: 0;
+    font-size: 15px;
+    color: #20253A;
+
+}
+
+.activity__legend{
+    color: #74798C;
+    font-size: 14px;
+}
+
+.legend{
+    margin-right: 5px;
+    margin-left: 50px;
+}

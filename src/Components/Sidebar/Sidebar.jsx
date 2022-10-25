@@ -4,6 +4,7 @@ import yogaIcon from "../../assets/sidebar_1.svg";
 import swimIcon from "../../assets/sidebar_2.svg";
 import bikeIcon from "../../assets/sidebar_3.svg";
 import weightIcon from "../../assets/sidebar_4.svg";
+import "./sidebar.css";
 
 const Sidebar = () => {
     return (
@@ -14,6 +15,9 @@ const Sidebar = () => {
                 <Link to="/velo"><img src={bikeIcon} alt="Icon Vélo" /></Link>
                 <Link to="/musculation"><img src={weightIcon} alt="Icon Musculation" /></Link>
             </nav>
+            <footer>
+                <p>Copyright, SportSee 2022</p>
+            </footer>
         </aside>
     );
 };

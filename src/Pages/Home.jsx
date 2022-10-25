@@ -1,6 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import DailyActivity from "../Components/DailyActivity/DailyActivity";
+import Activity from "../Components/Activity/Activity";
+import Session from "../Components/Session/Session";
+import Performance from "../Components/Performance/Performance";
+import Score from "../Components/Score/Score";
+import Informations from "../Components/Informations/Informations";
 
 const Home = () => {
     return (
@@ -12,7 +16,16 @@ const Home = () => {
 
             <div className="user__charts">
                 <article className="charts-container">
-                    <DailyActivity />
+                    <Activity />
+                    <div className="charts-container-flex">
+                    <Session />
+                    <Performance />
+                    <Score />
+                    </div>
+                </article>
+
+                <article className="user__informations">
+                    <Informations />
                 </article>
             </div>
         </section>
