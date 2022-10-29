@@ -13,9 +13,22 @@ const data = [
   {name: 'Page G',uv: 3490,pv: 4300,amt: 2100,},
 ];
 
+
 const getDay = (date) => {
   const dateNbr = new Date(date);
+  console.log(dateNbr);
   return dateNbr.getDate();
+}
+
+
+/** 
+ * Custom tooltip
+ * @return custom tooltip component
+ */
+const TooltipTest = () => {
+  return (
+    <div>Test</div>
+  )
 }
 
 const Activity = () => {
@@ -44,7 +57,7 @@ const Activity = () => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="day" dx={-10} dy={1} axisLine={false} tickLine={false} tickFormatter={getDay}/>
           <YAxis axisLine={false} tickLine={false} orientation="right"/>
-          <Tooltip />
+          <Tooltip content ={<TooltipTest />} />
           <Bar dataKey="pv" fill="#282D30" radius={[50, 50, 0, 0]}/>
           <Bar dataKey="uv" fill="#E60000" radius={[50, 50, 0, 0]}/>
         </BarChart>

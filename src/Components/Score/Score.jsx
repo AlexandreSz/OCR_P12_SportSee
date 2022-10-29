@@ -32,8 +32,6 @@ const Score = () => {
 
         </Pie>
         </PieChart>
-
-
         </ResponsiveContainer>
 
 
