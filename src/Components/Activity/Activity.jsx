@@ -1,37 +1,40 @@
-import React from "react";
+import React, { useState , useEffect } from "react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer} from "recharts";
 import {ReactComponent as Dot } from "../../assets/Dot.svg";
+import { getActivity } from "../../Services/API";
+import { useParams } from 'react-router-dom'
 import "./activity.css";
-
-const data = [
-  {name: 'Page A', uv: 4000, pv: 2400,amt: 2400,},
-  {name: 'Page B',uv: 3000,pv: 1398,amt: 2210,},
-  {name: 'Page C',uv: 2000,pv: 9800,amt: 2290,},
-  {name: 'Page D',uv: 2780,pv: 3908,amt: 2000,},
-  {name: 'Page E',uv: 1890,pv: 4800,amt: 2181,},
-  {name: 'Page F', uv: 2390,pv: 3800,amt: 2500,},
-  {name: 'Page G',uv: 3490,pv: 4300,amt: 2100,},
-];
-
-
-const getDay = (date) => {
-  const dateNbr = new Date(date);
-  console.log(dateNbr);
-  return dateNbr.getDate();
-}
 
 
 /** 
  * Custom tooltip
  * @return custom tooltip component
  */
-const TooltipTest = () => {
-  return (
-    <div>Test</div>
-  )
+const CustomToolTip = ({active, payload}) => {
+  return active && payload ? (
+    <div className="tooltip">
+    <div className="poids">{`${payload[0].value} Kg`}</div>
+    <div className="calories">{`${payload[1].value} KCal`}</div>
+  </div>
+  ) : null;
 }
 
 const Activity = () => {
+
+
+const [userActivity, setUserActivity] = useState([]);
+const userId = useParams().id;
+
+useEffect(() => {
+  async function fetchActivity(){
+    const activity = await getActivity(userId);
+    setUserActivity(activity);
+  }
+
+  fetchActivity();
+})
+
+  
   return (
     <div className="activity">
       <div className="activity__header">
@@ -44,9 +47,11 @@ const Activity = () => {
 
       <ResponsiveContainer width="100%" height="75%">
         <BarChart
+          data = {userActivity}
           width={500}
           height={300}
-          data={data}
+          barCategoryGap={35}
+          barGap={8}
           margin={{
             top: 5,
             right: 30,
@@ -54,16 +59,21 @@ const Activity = () => {
             bottom: 5,
           }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="day" dx={-10} dy={1} axisLine={false} tickLine={false} tickFormatter={getDay}/>
-          <YAxis axisLine={false} tickLine={false} orientation="right"/>
-          <Tooltip content ={<TooltipTest />} />
-          <Bar dataKey="pv" fill="#282D30" radius={[50, 50, 0, 0]}/>
-          <Bar dataKey="uv" fill="#E60000" radius={[50, 50, 0, 0]}/>
+          <CartesianGrid strokeDasharray="3 3" vertical={false} />
+          <XAxis dataKey="name" axisLine={false} tickLine={false}/>
+          <YAxis yAxisId={"kil"} domain={["dataMin - 2", "dataMax + 1"]} tick={{ transform: 'translate(0, 0)', fontSize: "14px" }} tickMargin={15} tickLine={false} orientation="right" dataKey="kilogram" axisLine={false} />
+          <YAxis yAxisId={"cal"}  hide={true}  domain={["dataMin - 100", "dataMax"]}  />
+          <Tooltip content ={<CustomToolTip />} />
+          <Bar dataKey="kilogram" fill="#282D30" radius={[50, 50, 0, 0]} yAxisId={"kil"}/>
+          <Bar dataKey="calories" fill="#E60000" radius={[50, 50, 0, 0]} yAxisId={"cal"}/>
         </BarChart>
       </ResponsiveContainer>
     </div>
   )
+
+  
 }
+
+
 
 export default Activity;

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Home from "./Pages/Home";
+import Error from "./Pages/Error";
 
 import "./App.css";
 
@@ -16,8 +17,8 @@ const App = () => {
         <Sidebar />
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<Home />} />
+          <Route path="/user/:id" element={<Home />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </main>
       </BrowserRouter>
