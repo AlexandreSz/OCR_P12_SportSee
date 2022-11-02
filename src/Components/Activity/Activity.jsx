@@ -61,11 +61,11 @@ useEffect(() => {
         >
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
           <XAxis dataKey="name" axisLine={false} tickLine={false}/>
-          <YAxis yAxisId={"kil"} domain={["dataMin - 2", "dataMax + 1"]} tick={{ transform: 'translate(0, 0)', fontSize: "14px" }} tickMargin={15} tickLine={false} orientation="right" dataKey="kilogram" axisLine={false} />
+          <YAxis yAxisId={"kil"} domain={["dataMin - 2", "dataMax + 1"]} tickMargin={15} tickLine={false} orientation="right" dataKey="kilogram" axisLine={false} />
           <YAxis yAxisId={"cal"}  hide={true}  domain={["dataMin - 100", "dataMax"]}  />
           <Tooltip content ={<CustomToolTip />} />
-          <Bar dataKey="kilogram" fill="#282D30" radius={[50, 50, 0, 0]} yAxisId={"kil"}/>
-          <Bar dataKey="calories" fill="#E60000" radius={[50, 50, 0, 0]} yAxisId={"cal"}/>
+          <Bar dataKey="kilogram" fill="#282D30" radius={[50, 50, 0, 0]} yAxisId={"kil"} barSize={15}/>
+          <Bar dataKey="calories" fill="#E60000" radius={[50, 50, 0, 0]} yAxisId={"cal"} barSize={15}/>
         </BarChart>
       </ResponsiveContainer>
     </div>

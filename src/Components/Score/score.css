@@ -1,7 +1,7 @@
 .score{
     width: 258px;
     height: 263px;
-    background-color: #fbfbfb;
+    background-color: #FBFBFB;
     border-radius: 5px;
 }
 
@@ -11,4 +11,19 @@
 
 .score__header h1{
     margin: 0;
+}
+
+
+.score__label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #FFF;
+    bottom: 67%;
+    left: 22%;
+    width: 55%;
+    height: 55%;
+    border-radius: 50%;
 }
