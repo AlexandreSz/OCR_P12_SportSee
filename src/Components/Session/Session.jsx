@@ -1,26 +1,10 @@
 import React from 'react';
 import { LineChart, Line, XAxis, ResponsiveContainer } from 'recharts';
-import { useParams } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { getSessions } from "../../Services/API";
 import "./session.css";
 
 
 
-const Session = () => {
-  const [userSession, setUserSession] = useState([]);
-  const userId = useParams().id;
-  const week = ["L", "M", "M", "J", "V", "S", "D"];
-
-  useEffect(() => {
-    async function fetchSession(){
-      const data = await getSessions(userId);
-      setUserSession(data);
-    }
-
-    fetchSession();
-  })
-
+const Session = ({sessions}) => {
 
   return (
     <div className='session'>
@@ -30,9 +14,9 @@ const Session = () => {
       
     <ResponsiveContainer width="100%" height="70%">
       <LineChart
+      data={sessions}
         width={500}
         height={300}
-        data={userSession}
         margin={{
           top: 5,
           right: 30,
@@ -41,8 +25,8 @@ const Session = () => {
         }}
       >
         
-        <XAxis tickLine={false} />
-        <Line type="monotone" dataKey="pv" stroke="#fff" dot={false} activeDot={{ r: 3 }} />
+        <XAxis tickLine={false} dataKey="day" />
+        <Line type="monotone" dataKey="sessionLength" stroke="#fff" dot={false} activeDot={{ r: 3 }} />
       </LineChart>
     </ResponsiveContainer>
     </div>

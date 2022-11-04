@@ -1,24 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { ResponsiveContainer, RadialBarChart , RadialBar } from 'recharts';
-import { getScore } from '../../Services/API';
+import React from 'react';
+import { ResponsiveContainer, RadialBarChart , RadialBar, PolarAngleAxis } from 'recharts';
 import "./score.css";
 
 
-const Score = () => {
-
-  const [userScore, setUserScore] = useState([]);
-  const userId = useParams().id;
-
-  useEffect(() => {
-    async function fetchScore(){
-      const data = await getScore(userId);
-      setUserScore(data);
-    }
-
-    fetchScore();
-  })
-
+const Score = ({score}) => {
   return (
     <div className='score'>
 
@@ -26,13 +11,27 @@ const Score = () => {
         <h1>Score</h1>
       </div>
       <ResponsiveContainer width="100%" height="80%">
-      <RadialBarChart data={userScore[0]} width={250} height={250} innerRadius="65%" outerRadius="90%"  startAngle={105} endAngle={600} barCategoryGap={0} >
-            <RadialBar minAngle={35} label={false} clockWise={true} dataKey='value' background={false}/>
+      <RadialBarChart data={score} width={250} height={250} innerRadius="65%" outerRadius="90%"  startAngle={105} endAngle={600} barCategoryGap={0} >
+      <circle cx="50%" cy="50%" fill="white" r="82"></circle>
+          <PolarAngleAxis
+            type="number"
+            domain={[0, 100]}
+            angleAxisId={1}
+            tick={false}
+          />
+          <RadialBar
+            background
+            dataKey="uv"
+            angleAxisId={1}
+            fill="#E60000"
+            cornerRadius="10"
+            data={[score[0]]}
+          />
         </RadialBarChart>
         </ResponsiveContainer>
 
         <div className='score__label'>
-          <div className='score__number'>{userScore[1]}</div>
+          <div className='score__number'>{score} %</div>
           <div className='score__text'>de votre objectif</div>
         </div>
     </div>

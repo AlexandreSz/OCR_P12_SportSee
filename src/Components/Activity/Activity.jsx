@@ -1,8 +1,6 @@
-import React, { useState , useEffect } from "react";
+import React from "react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer} from "recharts";
 import {ReactComponent as Dot } from "../../assets/Dot.svg";
-import { getActivity } from "../../Services/API";
-import { useParams } from 'react-router-dom'
 import "./activity.css";
 
 
@@ -19,22 +17,8 @@ const CustomToolTip = ({active, payload}) => {
   ) : null;
 }
 
-const Activity = () => {
+const Activity = ({activity}) => {  
 
-
-const [userActivity, setUserActivity] = useState([]);
-const userId = useParams().id;
-
-useEffect(() => {
-  async function fetchActivity(){
-    const activity = await getActivity(userId);
-    setUserActivity(activity);
-  }
-
-  fetchActivity();
-})
-
-  
   return (
     <div className="activity">
       <div className="activity__header">
@@ -47,7 +31,7 @@ useEffect(() => {
 
       <ResponsiveContainer width="100%" height="75%">
         <BarChart
-          data = {userActivity}
+          data={activity}
           width={500}
           height={300}
           barCategoryGap={35}
@@ -60,11 +44,11 @@ useEffect(() => {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
-          <XAxis dataKey="name" axisLine={false} tickLine={false}/>
+          <XAxis dataKey="day" axisLine={false} tickLine={false}/>
           <YAxis yAxisId={"kil"} domain={["dataMin - 2", "dataMax + 1"]} tickMargin={15} tickLine={false} orientation="right" dataKey="kilogram" axisLine={false} />
           <YAxis yAxisId={"cal"}  hide={true}  domain={["dataMin - 100", "dataMax"]}  />
           <Tooltip content ={<CustomToolTip />} />
-          <Bar dataKey="kilogram" fill="#282D30" radius={[50, 50, 0, 0]} yAxisId={"kil"} barSize={15}/>
+          <Bar  dataKey="kilogram" fill="#282D30" radius={[50, 50, 0, 0]} yAxisId={"kil"} barSize={15}/>
           <Bar dataKey="calories" fill="#E60000" radius={[50, 50, 0, 0]} yAxisId={"cal"} barSize={15}/>
         </BarChart>
       </ResponsiveContainer>
