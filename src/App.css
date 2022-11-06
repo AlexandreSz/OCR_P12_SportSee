@@ -103,3 +103,17 @@ main{
   color: white;
   text-decoration: none;
 }
+
+
+/** PAGE ERROR **/
+.error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.error p {
+  font-size: 30px;
+  font-weight: 600;
+}
