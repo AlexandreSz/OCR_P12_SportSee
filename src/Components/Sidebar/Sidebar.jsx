@@ -6,6 +6,11 @@ import bikeIcon from "../../assets/sidebar_3.svg";
 import weightIcon from "../../assets/sidebar_4.svg";
 import "./sidebar.css";
 
+/**
+ * 
+ * @component
+ * @returns Sidebar component
+ */
 const Sidebar = () => {
     return (
         <aside className="sidebar">

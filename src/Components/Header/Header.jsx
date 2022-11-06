@@ -3,6 +3,11 @@ import Logo from "../../assets/SportSee-Logo.svg";
 import { Link } from "react-router-dom";
 import "./header.css";
 
+/**
+ * @component
+ * @returns Header Component
+ */
+
 const Header = () => {
     return (
         <div className="navbar">

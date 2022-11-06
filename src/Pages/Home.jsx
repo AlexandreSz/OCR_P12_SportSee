@@ -8,7 +8,10 @@ import Informations from "../Components/Informations/Informations";
 import { getUserMainData, getUserActivity, getUserSession, getUserPerformance } from "../Services/fetchData";
 
 
-
+/**
+ * 
+ * @returns Home Page
+ */
 
 const Home = () => {
 

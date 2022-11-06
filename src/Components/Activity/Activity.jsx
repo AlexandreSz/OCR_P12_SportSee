@@ -4,9 +4,11 @@ import {ReactComponent as Dot } from "../../assets/Dot.svg";
 import "./activity.css";
 
 
-/** 
- * Custom tooltip
- * @return custom tooltip component
+/**
+ * 
+ * @param {boolean} active
+ * @param {Array} payload 
+ * @returns custom ToolTip
  */
 const CustomToolTip = ({active, payload}) => {
   return active && payload ? (
@@ -17,6 +19,11 @@ const CustomToolTip = ({active, payload}) => {
   ) : null;
 }
 
+/**
+ * @component
+ * @param {Array} Array of user's activity 
+ * @returns Activity component
+ */
 const Activity = ({activity}) => {  
 
   return (

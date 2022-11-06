@@ -3,6 +3,12 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } fro
 import "./performance.css";
 
 
+/**
+ * 
+ * @component
+ * @param {Array} Array of users performance 
+ * @returns Performance component
+ */
 
 const Performance = ({performance}) => {
 

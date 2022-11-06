@@ -1,5 +1,9 @@
 import React from "react";
 
+/**
+ * 
+ * @returns Error page
+ */
 
 const Error = () => {
     return (

@@ -7,6 +7,12 @@ import {USER_ACTIVITY, USER_AVERAGE_SESSIONS, USER_MAIN_DATA, USER_PERFORMANCE} 
 
 const ENV = "dev";
 
+
+/**
+ * Fetch and format he main user's data
+ * @param {number} id 
+ * @returns {Object} all of the user's information
+ */
 export const getUserMainData = async (id) => {
     if(ENV === "dev"){
         const data = USER_MAIN_DATA.find((element) => element.id.toString() === id);
@@ -20,6 +26,12 @@ export const getUserMainData = async (id) => {
         return user;         
     }
 }
+
+/**
+ * Fetch and format the user's activities data
+ * @param {number} id 
+ * @returns {Object} all of the user's activity data
+ */
 
 export const getUserActivity = async (id) => {
     if(ENV === "dev"){
@@ -35,6 +47,12 @@ export const getUserActivity = async (id) => {
     }
 }
 
+/**
+ * Fetch and format all of the users' session data
+ * @param {number} id 
+ * @returns {Object} all of the user's session data
+ */
+
 export const getUserSession = async (id) => {
     if(ENV === "dev"){
         const data = USER_AVERAGE_SESSIONS.find((element) => element.userId.toString() === id);
@@ -48,6 +66,12 @@ export const getUserSession = async (id) => {
         return sessions;
     }
 }
+
+/**
+ * fetch and format all of the user's performance data
+ * @param {number} id 
+ * @returns {Object} all of the user's performance data
+ */
 
 export const getUserPerformance = async (id) => {
     if(ENV === "dev"){

@@ -9,6 +9,12 @@ import "./informations.css";
 import { useParams } from "react-router-dom";
 import { getUserMainData } from "../../Services/fetchData";
 
+
+/**
+ * @component
+ * @returns Informations component
+ */
+
 const Informations = () => {
     const {id} = useParams();
     const [data, setData] = useState(null);

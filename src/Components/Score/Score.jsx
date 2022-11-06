@@ -2,6 +2,12 @@ import React from 'react';
 import { ResponsiveContainer, RadialBarChart , RadialBar, PolarAngleAxis } from 'recharts';
 import "./score.css";
 
+/**
+ * 
+ * @component
+ * @param {Array} Array of users score 
+ * @returns score component
+ */
 
 const Score = ({score}) => {
 
@@ -12,7 +18,7 @@ const Score = ({score}) => {
         <h1>Score</h1>
       </div>
       <ResponsiveContainer width="100%" height="80%">
-      <RadialBarChart data={data} width={250} height={250} innerRadius="65%" outerRadius="90%"  startAngle={105} endAngle={600} barCategoryGap={0} >
+      <RadialBarChart data={data} width={250} height={250} innerRadius={70}  startAngle={80} endAngle={450} barCategoryGap={0} >
       <circle cx="50%" cy="50%" fill="white" r="82"></circle>
           <PolarAngleAxis
             type="number"

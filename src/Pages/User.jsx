@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom"
 
+/**
+ * 
+ * @returns User Selection Page
+ */
 const User = () => {
     return (
         <div className="main">
