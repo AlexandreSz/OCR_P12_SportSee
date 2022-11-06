@@ -3,7 +3,6 @@ import Calories from "../../assets/calories-icon.svg";
 import Protein from "../../assets/protein-icon.svg";
 import Carbs from "../../assets/carbs-icon.svg";
 import Fat from "../../assets/fat-icon.svg";
-import PropTypes from "prop-types";
 import {useState, useEffect} from "react";
 import "./informations.css";
 import { useParams } from "react-router-dom";

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ResponsiveContainer, RadialBarChart , RadialBar, PolarAngleAxis } from 'recharts';
+import PropTypes from 'prop-types'
 import "./score.css";
 
 /**
@@ -42,6 +43,10 @@ const Score = ({score}) => {
     </div>
     
   );
+}
+
+Score.propTypes = {
+  score: PropTypes.number
 }
 
 export default Score;

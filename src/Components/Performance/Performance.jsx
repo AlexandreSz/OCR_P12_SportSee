@@ -1,5 +1,6 @@
 import React from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
+import PropTypes from 'prop-types'
 import "./performance.css";
 
 
@@ -24,6 +25,16 @@ const Performance = ({performance}) => {
     </div>
 
   );
+}
+
+
+Performance.propTypes = {
+  performance: PropTypes.arrayOf(
+    PropTypes.shape({
+      kind: PropTypes.string,
+      value: PropTypes.number
+    })
+  )
 }
 
 export default Performance;

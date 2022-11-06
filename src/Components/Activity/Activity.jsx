@@ -1,6 +1,7 @@
 import React from "react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer} from "recharts";
 import {ReactComponent as Dot } from "../../assets/Dot.svg";
+import PropTypes from 'prop-types'
 import "./activity.css";
 
 
@@ -65,6 +66,12 @@ const Activity = ({activity}) => {
   
 }
 
-
+Activity.propTypes = {
+  activity: PropTypes.arrayOf(PropTypes.shape({
+    calories: PropTypes.number,
+    day: PropTypes.string,
+    kilogram: PropTypes.number
+  }))
+}
 
 export default Activity;

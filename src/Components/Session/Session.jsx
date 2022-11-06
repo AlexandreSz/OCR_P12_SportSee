@@ -1,5 +1,6 @@
 import React from 'react';
 import { LineChart, Line, XAxis, Rectangle, Tooltip, ResponsiveContainer } from 'recharts';
+import PropTypes from 'prop-types'
 import "./session.css";
 
 /**
@@ -67,5 +68,13 @@ const Session = ({sessions}) => {
   );
 }
 
+Session.propTypes = {
+  sessions: PropTypes.arrayOf(
+    PropTypes.shape({
+      day: PropTypes.string,
+      sessionLength: PropTypes.number
+    })
+  )
+}
     
 export default Session;
