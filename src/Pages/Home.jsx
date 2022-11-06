@@ -40,7 +40,7 @@ useEffect(() => {
     return (
         <section className="user">
             <div className="user__infos">
-                <h1>Bonjour <span>{data?.firstName}</span></h1>
+                <h1>Bonjour <span>{data?.user?.firstName}</span></h1>
                 <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
             </div>
 
