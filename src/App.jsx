@@ -16,7 +16,6 @@ const App = () => {
       <Header />
       <main>
         <Sidebar />
-
         <Routes>
         <Route path="/" element={<User />} />
           <Route path="/user/:id" element={<Home />} />

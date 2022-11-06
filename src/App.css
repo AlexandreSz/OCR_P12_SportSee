@@ -34,23 +34,11 @@ main{
 }
 
 
-
-
-
 .charts-container-flex{
   display: flex;
   justify-content: space-between;
   width: 1000px;
 }
-
-.main{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
 
 
 @media screen and (min-width: 1000px) and (max-width: 1440px) {
@@ -94,4 +82,24 @@ main{
     margin: 5px;
 
   }
+}
+
+
+/** PAGE USERS **/
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.content__button a{
+  margin: 10px;
+  background-color: #FF0101;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
 }
