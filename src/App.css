@@ -35,6 +35,8 @@ main{
 
 
 
+
+
 .charts-container-flex{
   display: flex;
   justify-content: space-between;
@@ -47,4 +49,49 @@ main{
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+
+
+@media screen and (min-width: 1000px) and (max-width: 1440px) {
+  .user__charts {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 800px;
+  }
+
+  .informations{
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+  }
+
+  .informations div img{
+    margin-left: 10px;
+  }
+
+  .user{
+    max-width: 1024px;
+  }
+
+  .user__infos{
+    margin: 0 auto;
+    width: 800px;
+  }
+
+
+  .activity{
+    width: 800px;
+  }
+
+  .charts-container-flex{
+    width: 600px;
+  }
+
+  .charts-container-flex div{
+    margin: 5px;
+
+  }
 }

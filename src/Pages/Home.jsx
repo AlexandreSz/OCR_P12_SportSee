@@ -24,7 +24,6 @@ useEffect(() => {
             const performance = await getUserPerformance(id);
             setData({user, activity, sessions, performance});
 
-            console.log(performance.formatPerf);
 
         } catch(error){
             console.log(error);
