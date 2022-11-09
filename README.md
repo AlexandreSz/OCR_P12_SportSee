@@ -9,12 +9,17 @@
 ### Presentation
 - SportSee is an analytics dashboard made for people who want to follow their daily activities and progress.
 ---
+### Recommended IDE
+- Visual Studio Code
+---
 ### Pre-requisites & Dependencies
-- [NodeJS](https://nodejs.org/en/)
-- [NPM](https://www.npmjs.com)
-- [ReactJS](https://fr.reactjs.org/docs/getting-started.html)
-- [React Router Dom](https://v5.reactrouter.com/web/guides/quick-start)
-- [ReCharts](https://recharts.org/en-US/guide/installation)
+- [NodeJS](https://nodejs.org/en/) (v14.17.6)
+- [NPM](https://www.npmjs.com) (v6.14.15)
+- [ReactJS](https://fr.reactjs.org/docs/getting-started.html) (v18.2.0)
+- [React Router Dom](https://v5.reactrouter.com/web/guides/quick-start) (v18.2.0)
+- [ReCharts](https://recharts.org/en-US/guide/installation) (v2.1.15)
+- [Axios](https://axios-http.com/fr/docs/intro) (v.1.1.3)
+- [PropTypes](https://www.npmjs.com/package/prop-types) (v15.8.1)
 
 ---
 ### Installing and launching the back-end
