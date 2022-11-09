@@ -7,7 +7,10 @@ export default class UserMainData{
         this.keyData = data.keyData
     }
 
-    /* JSDOC*/
+    /**
+     * 
+     * @returns the percentage left to complete the user's goal
+     */
     getFormat(){
         return [{value: this.todayScore * 100}];
     }

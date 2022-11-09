@@ -11,7 +11,10 @@ export default class UserPerformance{
         this.formatPerf.reverse();
     }
 
-     /* JSDOC*/
+     /**
+      * 
+      * @returns kinf of performances translated in french
+      */
     translatePerf(){
         const formatPerf = ["Cardio", "Energie", "Endurance", "Force", "Vitesse", "Intensité"];
         return formatPerf;

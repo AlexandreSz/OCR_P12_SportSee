@@ -9,7 +9,10 @@ export default class UserSession{
         }))
     }
 
-     /* JSDOC*/
+     /**
+      * 
+      * @returns the week days in french
+      */
     weekDay(){
         const formatDay = ["L", "M", "M", "J", "V", "S", "D"];
         return formatDay;

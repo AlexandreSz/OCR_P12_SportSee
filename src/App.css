@@ -93,6 +93,7 @@ main{
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 90.2vh;
 }
 
 .content__button a{
