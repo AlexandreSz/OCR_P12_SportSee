@@ -9,8 +9,9 @@ import "./sidebar.css";
 /**
  * 
  * @component
- * @returns Sidebar component
+ * @return Sidebar component
  */
+
 const Sidebar = () => {
     return (
         <aside className="sidebar">

@@ -9,6 +9,7 @@ export default class UserSession{
         }))
     }
 
+     /* JSDOC*/
     weekDay(){
         const formatDay = ["L", "M", "M", "J", "V", "S", "D"];
         return formatDay;

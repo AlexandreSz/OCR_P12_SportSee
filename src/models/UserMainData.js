@@ -7,6 +7,7 @@ export default class UserMainData{
         this.keyData = data.keyData
     }
 
+    /* JSDOC*/
     getFormat(){
         return [{value: this.todayScore * 100}];
     }

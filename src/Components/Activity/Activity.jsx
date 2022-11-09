@@ -53,8 +53,8 @@ const Activity = ({activity}) => {
         >
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
           <XAxis dataKey="day" axisLine={false} tickLine={false}/>
-          <YAxis yAxisId={"kil"} domain={["dataMin - 2", "dataMax + 1"]} tickMargin={15} tickLine={false} orientation="right" dataKey="kilogram" axisLine={false} />
-          <YAxis yAxisId={"cal"}  hide={true}  domain={["dataMin - 100", "dataMax"]}  />
+          <YAxis yAxisId={"kil"} domain={[68, 71]} tickCount={4}  tickLine={false} orientation="right" dataKey="kilogram" axisLine={false} />
+          <YAxis yAxisId={"cal"}  hide={true}  domain={[0, 700]}  />
           <Tooltip content ={<CustomToolTip />} />
           <Bar  dataKey="kilogram" fill="#282D30" radius={[50, 50, 0, 0]} yAxisId={"kil"} barSize={15}/>
           <Bar dataKey="calories" fill="#E60000" radius={[50, 50, 0, 0]} yAxisId={"cal"} barSize={15}/>

@@ -5,10 +5,10 @@ import React from "react";
  * @returns Error page
  */
 
-const Error = () => {
+const Error = ({props}) => {
     return (
         <div className="error">
-        <p>404 - Cette page n'existe pas</p>
+        <p>{props.text}</p>
         </div>
 
     )

@@ -7,23 +7,27 @@ import {USER_ACTIVITY, USER_AVERAGE_SESSIONS, USER_MAIN_DATA, USER_PERFORMANCE} 
 
 const ENV = "dev";
 
-
 /**
- * Fetch and format he main user's data
+ * Fetch and format the main user's data
  * @param {number} id 
  * @returns {Object} all of the user's information
  */
+
 export const getUserMainData = async (id) => {
     if(ENV === "dev"){
         const data = USER_MAIN_DATA.find((element) => element.id.toString() === id);
         const user = new UserMainData(data);
         return user;
     } else {
-        const data = await axios
+        try{
+            const data = await axios
                 .get(`http://localhost:3000/user/${id}`)
                 .then((response) => response.data.data);
-        const user = new UserMainData(data);
-        return user;         
+            const user = new UserMainData(data);
+            return user; 
+        } catch(error){
+            console.error("Erreur API : " + error);
+        } 
     }
 }
 
@@ -39,11 +43,15 @@ export const getUserActivity = async (id) => {
         const activity = new UserActivity(data);
         return activity;
     } else {
-        const data = await axios    
+        try{
+            const data = await axios    
                 .get(`http://localhost:3000/user/${id}/activity`)
                 .then((response) => response.data.data);
-        const activity = new UserActivity(data);
-        return activity;
+            const activity = new UserActivity(data);
+            return activity;
+        } catch(error){
+            console.error("Erreur API : " + error);
+        }
     }
 }
 
@@ -59,11 +67,15 @@ export const getUserSession = async (id) => {
         const sessions = new UserSession(data);
         return sessions;
     } else{
-        const data = await axios
+          try{
+            const data = await axios
                 .get(`http://localhost:3000/user/${id}/average-sessions`)
                 .then((response) => response.data.data);
-        const sessions = new UserSession(data);
-        return sessions;
+            const sessions = new UserSession(data);
+            return sessions;
+          } catch(error){
+            console.error("Erreur API : " + error);
+          }
     }
 }
 
@@ -79,10 +91,14 @@ export const getUserPerformance = async (id) => {
         const performance = new UserPerformance(data);
         return performance;
     } else {
-        const data = await axios
+        try{
+            const data = await axios
                 .get(`http://localhost:3000/user/${id}/performance`)
                 .then((response) => response.data.data)
-        const performance = new UserPerformance(data);
-        return performance;
+            const performance = new UserPerformance(data);
+            return performance;
+        } catch(error){
+            console.error("Erreur API : " + error);
+        }
     }
 }
