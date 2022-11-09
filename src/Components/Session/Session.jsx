@@ -58,8 +58,6 @@ const Session = ({sessions}) => {
       >
         
         <XAxis tickLine={false} dataKey="day" axisLine={false} stroke="#fff" />
-
-
         <Tooltip content={<CustomToolTip />} cursor={<Cursor />} />
         <Line type="monotone" dataKey="sessionLength" stroke="#fff" dot={false} activeDot={{ r: 3 }} />
       </LineChart>
