@@ -12,7 +12,7 @@ import { getUserMainData } from "../../Services/fetchData";
 /**
  * @component
  * @returns Informations component
- */
+ **/
 
 const Informations = () => {
     const {id} = useParams();

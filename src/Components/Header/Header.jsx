@@ -12,7 +12,6 @@ const Header = () => {
     return (
         <div className="navbar">
             <img src={Logo} alt="Logo SportSee" className="navbar__logo" />
-
             <Link className="navbar__link" to="/">Accueil</Link>
             <Link className="navbar__link" to="/profil">Profil</Link>
             <Link className="navbar__link" to="/reglages">Réglage</Link>

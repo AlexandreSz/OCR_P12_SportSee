@@ -12,8 +12,8 @@ import "./session.css";
 const CustomToolTip = ({active, payload}) => {
   return active && payload ? (
     <div className="tooltip-session">
-    <div className="min">{`${payload[0].value} min`}</div>
-  </div>
+      <div className="min">{`${payload[0].value} min`}</div>
+    </div>
   ) : null;
 }
 

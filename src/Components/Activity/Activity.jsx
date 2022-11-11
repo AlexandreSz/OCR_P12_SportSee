@@ -14,9 +14,9 @@ import "./activity.css";
 const CustomToolTip = ({active, payload}) => {
   return active && payload ? (
     <div className="tooltip">
-    <div className="poids">{`${payload[0].value} Kg`}</div>
-    <div className="calories">{`${payload[1].value} KCal`}</div>
-  </div>
+      <div className="poids">{`${payload[0].value} Kg`}</div>
+      <div className="calories">{`${payload[1].value} KCal`}</div>
+    </div>
   ) : null;
 }
 
@@ -49,8 +49,8 @@ const Activity = ({activity}) => {
             right: 30,
             left: 20,
             bottom: 5,
-          }}
-        >
+          }}>
+          
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
           <XAxis dataKey="day" axisLine={false} tickLine={false}/>
           <YAxis yAxisId={"kil"} domain={["dataMin - 2", "dataMax + 1"]}  tickLine={false} orientation="right" dataKey="kilogram" axisLine={false} />
