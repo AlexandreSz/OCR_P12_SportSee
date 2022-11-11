@@ -26,7 +26,7 @@ export const getUserMainData = async (id) => {
             const user = new UserMainData(data);
             return user; 
         } catch(error){
-            console.error("Erreur API : " + error);
+            console.error("API indisponible : " + error);
         } 
     }
 }
@@ -50,7 +50,7 @@ export const getUserActivity = async (id) => {
             const activity = new UserActivity(data);
             return activity;
         } catch(error){
-            console.error("Erreur API : " + error);
+            console.error("API indisponible : " + error);
         }
     }
 }
@@ -74,7 +74,7 @@ export const getUserSession = async (id) => {
             const sessions = new UserSession(data);
             return sessions;
           } catch(error){
-            console.error("Erreur API : " + error);
+            console.error("API indisponible : " + error);
           }
     }
 }
@@ -98,7 +98,7 @@ export const getUserPerformance = async (id) => {
             const performance = new UserPerformance(data);
             return performance;
         } catch(error){
-            console.error("Erreur API : " + error);
+            console.error("API indisponible : " + error);
         }
     }
 }

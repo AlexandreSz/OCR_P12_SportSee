@@ -109,12 +109,21 @@ main{
 /** PAGE ERROR **/
 .error{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 90.2vh;
 }
 
-.error p {
+.error h1 {
   font-size: 30px;
   font-weight: 600;
+  color: #FF0101;
+  margin-bottom: 50px;
+}
+
+.error a{
+  font-size: 20px;
+  color: #000;
 }

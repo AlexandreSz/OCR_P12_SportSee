@@ -1,14 +1,16 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
 /**
  * 
  * @returns Error page
  */
 
-const Error = ({props}) => {
+const Error = () => {
     return (
         <div className="error">
-        <p>{props.text}</p>
+        <h1>404 - Cette page n'existe pas</h1>
+        <Link to="/">Retourner à l'accueil</Link>
         </div>
 
     )
