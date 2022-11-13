@@ -1,10 +1,12 @@
-.informations{
+.informations {
     display: flex;
     flex-direction: column;
-
 }
 
-.informations__calories, .informations__protein, .informations__carbs, .informations__fat{
+.informations__calories,
+.informations__protein,
+.informations__carbs,
+.informations__fat {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,21 +17,22 @@
     border-radius: 5px;
 }
 
-.informations h1, .informations p{
+.informations h1,
+.informations p {
     margin: 0;
 }
 
-.informations h1{
+.informations h1 {
     font-size: 20px;
-    color: #282D30;
+    color: #282d30;
 }
 
-.informations p{
+.informations p {
     font-size: 14px;
-    color: #74798C;
+    color: #74798c;
 }
 
-.informations img{
+.informations img {
     margin-right: 20px;
     margin-left: -30px;
 }

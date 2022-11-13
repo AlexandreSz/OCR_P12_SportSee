@@ -1,12 +1,11 @@
-.session{
+.session {
     height: 263px;
     width: 258px;
-    background-color: #FF0000;
+    background-color: #ff0000;
     border-radius: 5px;
 }
 
-
-.session__header h1{
+.session__header h1 {
     padding: 29px 29px 0 29px;
     color: #fff;
     font-size: 15px;
@@ -14,11 +13,9 @@
     margin: 0 0 20px 0;
 }
 
-.tooltip-session{
+.tooltip-session {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background-color: #FFF;
+    background-color: #fff;
 }
-
-
