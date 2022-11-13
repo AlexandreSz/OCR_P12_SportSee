@@ -5,6 +5,7 @@ import Carbs from "../../assets/carbs-icon.svg";
 import Fat from "../../assets/fat-icon.svg";
 import { useState, useEffect } from "react";
 import "./informations.css";
+import Card from "../Card/Card";
 import { useParams } from "react-router-dom";
 import { getUserMainData } from "../../Services/fetchData";
 
@@ -27,37 +28,41 @@ const Informations = () => {
 
     return (
         <div className="informations">
-            <div className="informations__calories">
-                <img src={Calories} alt="Logo Flamme" />
-                <div className="calories__text">
-                    <h1>{data?.keyData.calorieCount}kCal</h1>
-                    <p>Calories</p>
-                </div>
-            </div>
+            <Card
+                className="calories"
+                src={Calories}
+                alt="Logo Flamme"
+                textClassName="calories"
+                data={`${data?.keyData.calorieCount}kCal`}
+                text="Calories "
+            />
 
-            <div className="informations__protein">
-                <img src={Protein} alt="Logo poulet" />
-                <div className="protein__text">
-                    <h1>{data?.keyData.proteinCount}g</h1>
-                    <p>Protéines</p>
-                </div>
-            </div>
+            <Card
+                className="protein"
+                src={Protein}
+                alt="Logo poulet"
+                textClassName="protein"
+                data={`${data?.keyData.proteinCount}g`}
+                text="Protéines"
+            />
 
-            <div className="informations__carbs">
-                <img src={Carbs} alt="Logo pomme" />
-                <div className="carbs__text">
-                    <h1>{data?.keyData.carbohydrateCount}g</h1>
-                    <p>Glucides</p>
-                </div>
-            </div>
+            <Card
+                className="carbs"
+                src={Carbs}
+                alt="Logo pomme"
+                textClassName="carbs"
+                data={`${data?.keyData.carbohydrateCount}g`}
+                text="Glucides"
+            />
 
-            <div className="informations__fat">
-                <img src={Fat} alt="Logo burger" />
-                <div className="fat__text">
-                    <h1>{data?.keyData.lipidCount}g</h1>
-                    <p>Lipides</p>
-                </div>
-            </div>
+            <Card
+                className="fat"
+                src={Fat}
+                alt="Logo burger"
+                textClassName="fat"
+                data={`${data?.keyData.lipidCount}g`}
+                text="Lipides"
+            />
         </div>
     );
 };
