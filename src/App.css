@@ -1,129 +1,122 @@
-main{
-  display: flex;
-  column-gap: 5px;
-
+main {
+    display: flex;
+    column-gap: 5px;
 }
 
-.user{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+.user {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
-.user__infos{
-  margin-left: 100px;
+.user__infos {
+    margin-left: 100px;
 }
 
-.user__infos h1{
-  margin-bottom: 20px;
-  font-size: 48px;
+.user__infos h1 {
+    margin-bottom: 20px;
+    font-size: 48px;
 }
 
-.user__infos span{
-  color: #FF0101;
+.user__infos span {
+    color: #ff0101;
 }
 
 .user__infos p {
-  padding-bottom: 30px;
-  font-size: 18px;
+    padding-bottom: 30px;
+    font-size: 18px;
 }
 
-.user__charts{
-  display: flex;
-  margin-left: 100px;
+.user__charts {
+    display: flex;
+    margin-left: 100px;
 }
 
-
-.charts-container-flex{
-  display: flex;
-  justify-content: space-between;
-  width: 1000px;
+.charts-container-flex {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
 }
-
 
 @media screen and (min-width: 1000px) and (max-width: 1440px) {
-  .user__charts {
-    display: flex;
-    flex-direction: column-reverse;
-    margin: 0 auto;
-    max-width: 1024px;
-    width: 800px;
-  }
+    .user__charts {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0 auto;
+        max-width: 1024px;
+        width: 800px;
+    }
 
-  .informations{
-    display: flex;
-    flex-direction: row;
-    width: 800px;
-  }
+    .informations {
+        display: flex;
+        flex-direction: row;
+        width: 800px;
+    }
 
-  .informations div img{
-    margin-left: 10px;
-  }
+    .informations div img {
+        margin-left: 10px;
+    }
 
-  .user{
-    max-width: 1024px;
-  }
+    .user {
+        max-width: 1024px;
+    }
 
-  .user__infos{
-    margin: 0 auto;
-    width: 800px;
-  }
+    .user__infos {
+        margin: 0 auto;
+        width: 800px;
+    }
 
+    .activity {
+        width: 800px;
+    }
 
-  .activity{
-    width: 800px;
-  }
+    .charts-container-flex {
+        width: 600px;
+    }
 
-  .charts-container-flex{
-    width: 600px;
-  }
-
-  .charts-container-flex div{
-    margin: 5px;
-
-  }
+    .charts-container-flex div {
+        margin: 5px;
+    }
 }
-
 
 /** PAGE USERS **/
 
-.content{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 90.2vh;
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90.2vh;
 }
 
-.content__button a{
-  margin: 10px;
-  background-color: #FF0101;
-  padding: 10px;
-  border-radius: 5px;
-  color: white;
-  text-decoration: none;
+.content__button a {
+    margin: 10px;
+    background-color: #ff0101;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
 }
-
 
 /** PAGE ERROR **/
-.error{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 90.2vh;
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90.2vh;
 }
 
 .error h1 {
-  font-size: 30px;
-  font-weight: 600;
-  color: #FF0101;
-  margin-bottom: 50px;
+    font-size: 30px;
+    font-weight: 600;
+    color: #ff0101;
+    margin-bottom: 50px;
 }
 
-.error a{
-  font-size: 20px;
-  color: #000;
+.error a {
+    font-size: 20px;
+    color: #000;
 }

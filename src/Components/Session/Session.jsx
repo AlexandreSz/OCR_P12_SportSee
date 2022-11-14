@@ -16,6 +16,7 @@ import "./session.css";
  * @param {Array} payload array of data displayed in the tooltip
  * @returns custom ToolTip
  */
+
 const CustomToolTip = ({ active, payload }) => {
     return active && payload ? (
         <div className="tooltip-session">
@@ -60,12 +61,7 @@ const Session = ({ sessions }) => {
                     data={sessions}
                     width={500}
                     height={300}
-                    margin={{
-                        top: 5,
-                        right: 30,
-                        left: 20,
-                        bottom: 5
-                    }}
+                    margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
                 >
                     <XAxis
                         tickLine={false}
